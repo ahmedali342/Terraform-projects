@@ -4,12 +4,12 @@
       {
         "Effect": "Allow",
         "Principal": {
-          "Federated": "arn:aws:iam::YOUR_ACCOUNT_ID:oidc-provider/oidc.circleci.com/org/YOUR_ORG_ID"
+          "Federated": "arn:aws:iam::345594600514:oidc-provider/oidc.circleci.com/org/f405ad0b-ae25-45b6-affe-74768a944f98"
         },
         "Action": "sts:AssumeRoleWithWebIdentity",
         "Condition": {
           "StringEquals": {
-            "oidc.circleci.com/org/YOUR_ORG_ID:sub": "org/YOUR_ORG_ID/project/YOUR_PROJECT_ID/user/*"
+            "oidc.circleci.com/org/f405ad0b-ae25-45b6-affe-74768a944f98:sub": "repo:ahmedali342/s3-lambda-function:ref:refs/heads/main*"
           }
         }
       }
